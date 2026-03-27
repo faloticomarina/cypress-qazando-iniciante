@@ -21,7 +21,7 @@ jobs:
 
             # exempplo de execução no terminal
             - name: instalar dependencias do projeto
-              run: echo Marina Falotico   
+              run: npm install  
 
             # execução e config do prjeto  
             - name: Run testes
