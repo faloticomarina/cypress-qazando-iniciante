@@ -21,12 +21,14 @@ jobs:
 
             # exempplo de execução no terminal
             - name: instalar dependencias do projeto
-              run: echo Marina Falotico   
+              run: npm install  
 
             # execução e config do prjeto  
             - name: Run testes
-              uses: cypress-io/github-action@v7.0.0
+              uses: cypress-io/github-action@v7
               with: 
                 record: true
-                env:
+                parallel: false
+                group: "GitHub Actions"
+              env:
                 CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
